@@ -4,8 +4,9 @@
 // ============================================================
 window.SITE_CONFIG = {
   // Top-left link, e.g. "@yourhandle"
-  xHandle: null,
-  // Where that handle links, e.g. "https://x.com/yourhandle"
+  xHandle: "Tweet To Stop the Fucking Bullshit",
+  // Where that top-left link goes. Leave null to open a pre-written
+  // post with #fuckthisbullshit, or set e.g. "https://x.com/yourhandle"
   xUrl: null,
 
   // "Post #fuckthisbullshit on ___" — e.g. "X" or "Bluesky"
@@ -14,9 +15,9 @@ window.SITE_CONFIG = {
   platformUrl: null,
 
   // Footer contact block
-  contactEmail: null,       // e.g. "hello@example.com"
-  whoIsBehind: null,        // e.g. "Made by Jane Doe, a journalist in Paris"
+  contactEmail: "sjcobrien@yahoo.com",
+  whoIsBehind: "Chris O'Brien",
 
-  // Show the names of people who signed, under the letter
-  showSignerNames: true,
+  // Show the latest signatures under the letter (anonymous: role only)
+  showSignerList: true,
 };

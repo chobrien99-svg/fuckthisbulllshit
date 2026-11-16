@@ -37,8 +37,9 @@ form says signing opens shortly.
   in `public/config.js`.
 - **Add a fact** to "The record": copy one `<div class="fact">…</div>` block
   in `public/index.html` and change the date, sentence and link.
-- **Hide signer names** from the page: set `showSignerNames: false` in
-  `public/config.js`.
+- **Signatures under the letter are anonymous**: only the role is shown,
+  and names are never sent to visitors' browsers. To hide the list
+  entirely, set `showSignerList: false` in `public/config.js`.
 
 ## Signatures and privacy
 

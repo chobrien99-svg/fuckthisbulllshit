@@ -19,10 +19,13 @@
     el.replaceWith(a);
   });
 
+  var tweetUrl = 'https://x.com/intent/post?text=' +
+    encodeURIComponent('#fuckthisbullshit ' + location.origin);
   var hashtag = document.getElementById('hashtag-link');
-  if (hashtag) {
-    hashtag.href = cfg.platformUrl ||
-      'https://x.com/intent/post?text=' + encodeURIComponent('#fuckthisbullshit ' + location.origin);
+  if (hashtag) hashtag.href = cfg.platformUrl || tweetUrl;
+  var topLink = document.getElementById('top-link');
+  if (topLink && !cfg.xUrl) {
+    topLink.href = tweetUrl; topLink.target = '_blank'; topLink.rel = 'noopener';
   }
 
   // ---- Live count + signer list ----
@@ -34,18 +37,16 @@
   function fmt(n) { return Number(n).toLocaleString('en-US'); }
 
   function renderSigners(list) {
-    if (!cfg.showSignerNames || !Array.isArray(list)) return;
+    if (cfg.showSignerList === false || !Array.isArray(list)) return;
     signersBox.hidden = false;
     signerList.innerHTML = '';
     signersEmpty.hidden = list.length > 0;
     list.forEach(function (s) {
       var li = document.createElement('li');
-      li.textContent = s.name;
-      if (s.role) {
-        var r = document.createElement('span');
-        r.textContent = ' · ' + s.role;
-        li.appendChild(r);
-      }
+      li.textContent = 'Anonymous';
+      var r = document.createElement('span');
+      r.textContent = ' · ' + s.role;
+      li.appendChild(r);
       signerList.appendChild(li);
     });
   }

@@ -5,7 +5,7 @@ const ROLES = [
   'A person who read the resignation',
   'A shareholder who would like a CEO',
   'A recovering open-letter signer',
-  'Just tired',
+  'Just tired of all the fucking bullshit',
 ];
 const MAX_PER_IP_PER_HOUR = 10;
 
