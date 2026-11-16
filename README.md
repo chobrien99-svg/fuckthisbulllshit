@@ -1,0 +1,2 @@
+# fuckthisbulllshit
+Anti Nvidia Petition
