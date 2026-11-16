@@ -10,7 +10,7 @@ window.SITE_CONFIG = {
   xUrl: null,
 
   // "Post #fuckthisbullshit on ___" — e.g. "X" or "Bluesky"
-  platformName: null,
+  platformName: "Twitter",
   // Link for that line. Leave null to auto-build an X post with the hashtag.
   platformUrl: null,
 
